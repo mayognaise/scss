@@ -1,0 +1,19 @@
+@mixin flex($v: flex-start, $h: flex-start) {
+  align-items: $v;
+  display: flex;
+  justify-content: $h;
+}
+
+@mixin flex-center {
+  @include flex(center, center);
+}
+
+@mixin flex-column($v: flex-start, $h: flex-start) {
+  @include flex($v, $h);
+  flex-direction: column;
+}
+
+@mixin flex-wrap($v: flex-start, $h: flex-start) {
+  @include flex($v, $h);
+  flex-wrap: wrap;
+}

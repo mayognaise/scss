@@ -1,0 +1,5 @@
+@import '../variables';
+
+@mixin grid-width($size) {
+  width: ($size / $grid-width) * 100%;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "scss",
+  "title": "SCSS",
+  "version": "0.0.1",
+  "description": "Reusable scss settings",
+  "main": "./src/common.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "sassdoc src --config=sassdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayognaise/scss.git"
+  },
+  "keywords": [
+    "scss",
+    "sass"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mayognaise/scss/issues"
+  },
+  "homepage": "https://mayognaise.github.io/scss",
+  "devDependencies": {
+    "sassdoc": "^2.7.1"
+  }
+}

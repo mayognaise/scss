@@ -1,0 +1,22 @@
+@mixin text-anim-set {
+  transition: opacity 1s, transform 1s ease-out;
+}
+
+@mixin text-anim-hide {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+@mixin text-anim-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@mixin obj-anim-set {
+  transition: opacity 1s 0.3s, transform 1s 0.3s;
+}
+
+@mixin obj-anim-hide {
+  opacity: 0;
+  transform: translateY(50px);
+}

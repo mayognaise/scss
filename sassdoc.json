@@ -1,0 +1,10 @@
+{
+  "dest": "docs",
+  "descriptionPath": "./README.md",
+  "groups": {
+    "undefined": "Basic API",
+    "03 - media": "Media",
+    "10 - variables": "Variables",
+    "20 - library": "Library"
+  }
+}

@@ -1,0 +1,36 @@
+@import './media';
+
+@mixin f($font-family, $size: null, $lh: null, $ls: null, $sSize: null) {
+  font-family: $font-family, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  @if ($size) {
+    font-size: $size * 1px;
+  }
+  @if ($lh) {
+    line-height: $lh / $size;
+  }
+  @if ($ls) {
+    letter-spacing: $ls * 1px;
+  }
+  @if ($sSize) {
+    @include small {
+      font-size: $sSize * 1px;
+    }
+  }
+}
+
+// regular
+@mixin fr($size: null, $lh: null, $ls: null, $sSize: null) {
+  @include f(CircularStd-Book, $size, $lh, $ls, $sSize);
+}
+
+// bold
+@mixin fb($size: null, $lh: null, $ls: null, $sSize: null) {
+  @include f(CircularStd-Bold, $size, $lh, $ls, $sSize);
+}
+
+// heavy
+@mixin fh($size: null, $lh: null, $ls: null, $sSize: null) {
+  @include f(CircularStd-Black, $size, $lh, $ls, $sSize);
+}
