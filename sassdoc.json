@@ -4,7 +4,7 @@
   "groups": {
     "undefined": "Basic API",
     "03 - media": "Media",
-    "10 - variables": "Variables",
-    "20 - library": "Library"
+    "100 - variables": "Variables",
+    "200 - library": "Library"
   }
 }

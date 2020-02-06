@@ -18,5 +18,5 @@
 
 @mixin obj-anim-hide {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY($animation-init-y);
 }

@@ -20,19 +20,16 @@ You can simple call:
 
 ## Customize variables
 
+[Here is the default variables](https://github.com/mayognaise/scss/blob/master/src/variables.scss).
+
 If you wish customize variables:
 
-- Create a common scss file to use
-- Load initial variable first
-- Import customized variable file to overwrite
-- Then call all mixin
-
 ```scss
-// common.scss
-@import 'scss/src/variables';
-@import 'path/to/your/own/variables';
-@import 'scss/src/all-mixin';
+// common.scss - Create a common scss file to use
+@import 'scss/src/variables'; // Load initial variable first
+@import 'path/to/your/own/variables'; // Import customized variable file to overwrite
+@import 'scss/src/all-mixin'; // Then call all mixin
 
-// Then call the scss
+// You can use this file as library
 @import 'path/to/common';
 ```
