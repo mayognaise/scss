@@ -1,0 +1,31 @@
+/// Centre a block to make it a container
+/// @group 002 - layout
+/// @param {Number} $max-width [$grid-width] - Max width for the container.
+/// @param {Number} $margin-top [0] - Top margin.
+/// @param {Number} $margin-bottom [0] - Bottom margin.
+/// @output `max-width`, `margin` and `width`
+/// @require $grid-width
+/// @example
+///   @include max-width-center;
+///   //   margin: 0 auto 0;
+///   //   max-width: 960px;
+///   //   width: 100%;
+/// @example
+///   @include max-width-center(1200px);
+///   //   margin: 0 auto 0;
+///   //   max-width: 1200px;
+///   //   width: 100%;
+/// @example
+///   @include max-width-center(null, 30px);
+///   //   margin: 30px auto 0;
+///   //   max-width: 960px;
+///   //   width: 100%;
+@mixin max-width-center($max-width: null, $margin-top: 0, $margin-bottom: 0) {
+  margin: $margin-top auto $margin-bottom;
+  width: 100%;
+  @if ($max-width) {
+    max-width: $max-width;
+  } @else {
+    max-width: $grid-width;
+  }
+}

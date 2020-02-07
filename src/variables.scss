@@ -1,5 +1,6 @@
 /// Variable key for media breakpoints
-/// @group 100 - variables
+/// @group 100 - configuration
+/// @access public
 $breakpoints: (
   'x-small': (
     max-width: 359px
@@ -17,6 +18,12 @@ $breakpoints: (
     min-width: 1440px
   )
 ) !default;
+
+/// Baseline for all margins and gaps on the site
+/// @group 100 - configuration
+/// @access public
+/// @type Number
+$baseline: 1.5em;
 
 $grid-width: 960;
 

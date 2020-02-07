@@ -2,9 +2,10 @@
   "dest": "docs",
   "descriptionPath": "./README.md",
   "groups": {
-    "undefined": "Basic API",
-    "03 - media": "Media",
-    "100 - variables": "Variables",
-    "200 - library": "Library"
+    "002 - layout": "Layout",
+    "003 - media": "Media",
+    "100 - configuration": "Variables",
+    "200 - lib": "Lib",
+    "undefined": "General"
   }
 }

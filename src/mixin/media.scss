@@ -1,27 +1,7 @@
-/// Mixin to manage responsive breakpoints
-/// @group 200 - library
-/// @author Hugo Giraudel
-/// @param {String} $breakpoint - Breakpoint name
-/// @require $breakpoints
-/// @link https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
-@mixin respond-to($breakpoint) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
-      @content;
-    }
-  }
-
-  // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
-  }
-}
+@import './helpers';
 
 /// Mixin to add media query for x-small breakpoint (such as **iPhone 5/SE**). Default is **map-get($breakpoints, 'x-small')**. To update the key, update [$breakpoints](#10%20-%20variables-variable-breakpoints)
-/// @group 03 - Media
+/// @group 003 - media
 /// @require $breakpoints
 /// @example
 ///   @include x-small {
@@ -37,7 +17,7 @@
 }
 
 /// Mixin to add media query for small breakpoint (mainly for **mobile devices**). Default is **map-get($breakpoints, 'small')**. To update the key, update [$breakpoints](#10%20-%20variables-variable-breakpoints)
-/// @group 03 - Media
+/// @group 003 - media
 /// @require $breakpoints
 /// @example
 ///   @include small {
@@ -53,7 +33,7 @@
 }
 
 /// Mixin to add media query for medium breakpoint (such as **tablet / desktop**). Default is **map-get($breakpoints, 'medium')**. To update the key, update [$breakpoints](#10%20-%20variables-variable-breakpoints)
-/// @group 03 - Media
+/// @group 003 - media
 /// @require $breakpoints
 /// @example
 ///   @include medium {
@@ -69,7 +49,7 @@
 }
 
 /// Mixin to add media query for large breakpoint (such as **MDPI**). Default is **map-get($breakpoints, 'large')**. To update the key, update [$breakpoints](#10%20-%20variables-variable-breakpoints)
-/// @group 03 - Media
+/// @group 003 - media
 /// @require $breakpoints
 /// @example
 ///   @include large {
@@ -85,7 +65,7 @@
 }
 
 /// Mixin to add media query for x-large breakpoint (such as **HiDPI**). Default is **map-get($breakpoints, 'x-large')**. To update the key, update [$breakpoints](#10%20-%20variables-variable-breakpoints)
-/// @group 03 - Media
+/// @group 003 - media
 /// @require $breakpoints
 /// @example
 ///   @include x-large {
