@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /// Centre a block to make it a container. Default value of `$grid-width` is [here](#100%20-%20configuration-variable-grid-width).
 /// @group 002 - layout
 /// @param {Number} $max-width [$grid-width] - Max width for the container.
