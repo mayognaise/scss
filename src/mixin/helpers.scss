@@ -19,3 +19,20 @@
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+/// Remove the unit of a length
+/// @group 200 - lib
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} Unitless number
+/// @link https://css-tricks.com/snippets/sass/strip-unit-function/
+/// @example
+///   $length: 42px;
+///   $value: strip-unit($length);
+///   // -> 42
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
