@@ -48,5 +48,5 @@
 ///   $value: is-unitless(hello);
 ///   // -> false
 @function is-unitless($value) {
-  @return type-of(strip-units($max-width)) == 'number';
+  @return type-of(strip-units($value)) == 'number';
 }
