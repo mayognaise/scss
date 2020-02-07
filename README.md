@@ -26,9 +26,8 @@ If you wish customize variables:
 
 ```scss
 // common.scss - Create a common scss file to use
-@import 'scss/src/variables'; // Load initial variable first
-@import 'path/to/your/own/variables'; // Import customized variable file to overwrite
-@import 'scss/src/all-mixin'; // Then call all mixin
+@import 'path/to/your/own/variables'; // Import customized variable file. Don't forget adding
+@import 'scss';
 
 // You can use this file as library
 @import 'path/to/common';

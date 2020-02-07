@@ -1,2 +1,9 @@
 @import './variables';
-@import './all-mixin';
+@import './mixin/helpers';
+@import './mixin/layout';
+@import './mixin/media';
+@import './mixin/fonts';
+@import './mixin/flex';
+@import './mixin/grid';
+@import './mixin/scroll';
+@import './mixin/animation';
