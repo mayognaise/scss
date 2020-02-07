@@ -31,7 +31,11 @@
 ///   $value: strip-units($length);
 ///   // -> 42
 @function strip-units($value) {
-  @return $value / ($value * 0 + 1);
+  @if (type-of($value) == null) {
+    @return 0;
+  } @else {
+    @return $value / ($value * 0 + 1);
+  }
 }
 
 /// Return if value is numbrable after removing unit
@@ -48,5 +52,5 @@
 ///   $value: is-unitless(hello);
 ///   // -> false
 @function is-unitless($value) {
-  @return type-of(strip-units($value)) == 'number';
+  @return type-of(strip-units($value)) == number;
 }
