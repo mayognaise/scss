@@ -1,5 +1,5 @@
 @mixin grid-width($size) {
-  $num1: strip-unit($size);
-  $num2: strip-unit($grid-width);
+  $num1: strip-units($size);
+  $num2: strip-units($grid-width);
   width: ($num1 / $num2) * 100%;
 }

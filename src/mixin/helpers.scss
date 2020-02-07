@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 /// Mixin to manage responsive breakpoints
 /// @group 200 - lib
 /// @author Hugo Giraudel
@@ -24,17 +22,31 @@
 
 /// Remove the unit of a length
 /// @group 200 - lib
-/// @param {Number} $number - Number to remove unit from
+/// @param {Number} $value - Number to remove unit from
 /// @return {Number} Unitless number
-/// @link https://css-tricks.com/snippets/sass/strip-unit-function/
+/// @link https://github.com/sass/sass/issues/533#issuecomment-11675408
+/// @author Rob Wierzbowski
 /// @example
 ///   $length: 42px;
-///   $value: strip-unit($length);
+///   $value: strip-units($length);
 ///   // -> 42
-@function strip-unit($number) {
-  @if type-of($number) == 'number' and not math.is-unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
 
-  @return $number;
+/// Return if value is numbrable after removing unit
+/// @group 200 - lib
+/// @param {Number|String} $value - Number to remove unit from
+/// @return {Boolean}
+/// @example
+///   $value: is-unitless(10px);
+///   // -> true
+/// @example
+///   $value: is-unitless(10);
+///   // -> true
+/// @example
+///   $value: is-unitless(hello);
+///   // -> false
+@function is-unitless($value) {
+  @return type-of(strip-units($max-width)) == 'number';
 }
