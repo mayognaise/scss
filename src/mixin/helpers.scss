@@ -30,7 +30,7 @@
 ///   $value: strip-unit($length);
 ///   // -> 42
 @function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
+  @if type-of($number) == 'number' and not math.is-unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 
