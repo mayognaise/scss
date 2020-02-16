@@ -17,18 +17,3 @@
     }
   }
 }
-
-// regular
-@mixin fr($size: null, $lh: null, $ls: null, $sSize: null) {
-  @include f(CircularStd-Book, $size, $lh, $ls, $sSize);
-}
-
-// bold
-@mixin fb($size: null, $lh: null, $ls: null, $sSize: null) {
-  @include f(CircularStd-Bold, $size, $lh, $ls, $sSize);
-}
-
-// heavy
-@mixin fh($size: null, $lh: null, $ls: null, $sSize: null) {
-  @include f(CircularStd-Black, $size, $lh, $ls, $sSize);
-}
