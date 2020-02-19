@@ -1,5 +1,6 @@
 @mixin text-anim-set {
-  transition: opacity 1s, transform 1s ease-out;
+  transition: opacity $animation-duration,
+    transform $animation-duration ease-out;
 }
 
 @mixin text-anim-hide {
@@ -13,7 +14,8 @@
 }
 
 @mixin obj-anim-set {
-  transition: opacity 1s 0.3s, transform 1s 0.3s;
+  transition: opacity $animation-duration 0.3s,
+    transform $animation-duration 0.3s;
 }
 
 @mixin obj-anim-hide {
